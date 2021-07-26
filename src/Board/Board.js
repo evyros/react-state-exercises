@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Board.css';
 
 /**
@@ -9,19 +9,17 @@ import './Board.css';
  * 2. The other boards will return to their usual color (blue).
  */
 
-class Board extends Component {
-	render() {
-		return (
-			<div className="Board">
-				<h1>Choose board:</h1>
-				<div className="boards">
-					<div className="Board-option">1</div>
-					<div className="Board-option">2</div>
-					<div className="Board-option">3</div>
-				</div>
+function Board() {
+	return (
+		<div className="Board">
+			<h1>Choose board:</h1>
+			<div className="boards">
+				<div className="Board-option">1</div>
+				<div className="Board-option">2</div>
+				<div className="Board-option">3</div>
 			</div>
-		);
-	}
+		</div>
+	);
 }
 
 export default Board;

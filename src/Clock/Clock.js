@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 /**
  * Make a clock component that updates every second!
@@ -6,15 +6,13 @@ import React, { Component } from 'react';
  * Open the image to see the animation.
  */
 
-class Clock extends Component {
-	render() {
-		return (
-			<div>
-				<h1>Clock</h1>
-				The time is:
-			</div>
-		);
-	}
+function Clock() {
+	return (
+		<div>
+			<h1>Clock</h1>
+			The time is:
+		</div>
+	);
 }
 
 export default Clock;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 
 /**
  * Here is a working counter. Add more features to it:
@@ -7,37 +7,26 @@ import React, { Component } from 'react';
  * 3. Add another button "increase 10" which will increase the counter by 10 (if it's above limit, then set to the limit)
  */
 
-class Counter extends Component {
+function Counter() {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			num: 0
-		};
+	const [num, setNum] = useState(0);
+
+	function increase() {
+		setNum(num + 1);
 	}
 
-	increase() {
-		this.setState({
-			num: this.state.num + 1
-		});
+	function decrease() {
+		setNum(num - 1);
 	}
 
-	decrease() {
-		this.setState({
-			num: this.state.num - 1
-		});
-	}
-
-	render() {
-		return (
-			<div>
-				<h1>Counter: </h1>
-				<button onClick={this.increase.bind(this)}>Increase</button>
-				<button onClick={this.decrease.bind(this)}>Decrease</button>
-				<span>{this.state.num}</span>
-			</div>
-		);
-	}
+	return (
+		<div>
+			<h1>Counter: </h1>
+			<button onClick={() => increase()}>Increase</button>
+			<button onClick={() => decrease()}>Decrease</button>
+			<span>{num}</span>
+		</div>
+	);
 }
 
 export default Counter;
